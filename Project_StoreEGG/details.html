@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tienda Virtual</title>
+    <link rel="stylesheet" href="https://use.typekit.net/ntr4rrs.css">
+    <link rel="stylesheet" href="./styles/normalize.css">
+    <link rel="stylesheet" href="./styles/details.css">
+</head>
+<body>
+    <header class="header" id="header">
+        <div class="header-container">
+            <a href="./index.html" class="header-logo">
+                <img src="./assets/funkomania_logo.png" alt="Logo store" class="header-logo-img" width="218">
+            </a>
+            <form class="header-form">
+                <input type="text" class="header-form-input" placeholder="Search" id="search">
+            </form>
+            <ul class="header-icons">
+                <li id="facebook" class="header-icons-li">
+                    <a href="https://www.facebook.com/" class="header-icons-li-a">
+                        <img src="./assets/facebook.svg" alt="Logo de Facebook" class="header-icons-li-a-img">
+                    </a>
+                </li>
+                <li id="instagram" class="header-icons-li">
+                    <a href="https://www.instagram.com/" class="header-icons-li-a">
+                        <img src="./assets/instagram.svg" alt="Logo de Instagram" class="header-icons-li-a-img">
+                    </a>
+                </li>
+                <li id="cart" class="header-icons-li">
+                    <a href="./cart.html" class="header-icons-li-a">
+                        <img src="./assets/cart-shopping-solid.svg" alt="Logo de carrito de compras" class="header-icons-li-a-img">
+                    </a>
+                </li>
+                <li id="cart" class="header-icons-li">
+                    <a href="./logit.html" class="header-icons-li-a">
+                        <img src="./assets/user-large-solid.svg" alt="Logo de carrito de compras" class="header-icons-li-a-img">
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <nav class="navbar" id="nav">
+            <a href="#" class="navbar-a">OFERTAS</a>
+            <a href="#" class="navbar-a">DC COMICS</a>
+            <a href="#" class="navbar-a">DISNEY</a>
+            <a href="#" class="navbar-a">MARVEL</a>
+            <a href="#" class="navbar-a">STAR WARS</a>
+            <a href="#" class="navbar-a">PRE-VENTA</a>
+        </nav>
+    </header>
+    <main>
+        <div class="product-container" id="products">
+            <div class="product-img-block">
+                <div id="img-small" class="product-thumbnail">
+                    <img src="./assets/funko_pop_black_clover_caja.webp" alt="Funko Pop Black Clover - Black Asta - Caja">
+                    <img src="./assets/funko_pop_black_clover_brillo.jpg" alt="Funko Pop Black Clover - Black Asta - Brillo">
+                </div>
+                <div id="img-main" class="product-main-img">
+                    <img src="./assets/funko_pop_black_clover.webp" alt="Funko Pop de Black Clover">
+                </div>
+            </div>
+            <div id="description-block" class="product-description-block">
+                <h1 class="product-heading">Funko Pop de Black Clover</h1>
+                <p class="product-model">Exclusive Limited Edition</p>
+                <form class="product-selector">
+                    <fieldset class="product-fieldset">
+                        <label class="selector-label" for="color">Color:</label>
+                        <select class="selector-select" id="color">
+                            <option selected disabled>-- Seleccionar --</option>
+                            <option value="silver">Silver</option>
+                            <option value="gold">Gold</option>
+                            <option value="silverDark">Silver Dark</option>
+                        </select>
+                    </fieldset>
+                </form>
+                <div class="product-description">
+                    <h4 class="product-description-title">Descripción:</h4>
+                    <p class="product-description-content">
+                        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Fugiat quae dolore, facilis quasi eum cum, hic non vitae expedita eius mollitia modi quo voluptate illum? Vel, in. Facilis, exercitationem voluptates? Lorem ipsum dolor sit amet consectetur adipisicing elit. Voluptatem saepe maiores minima a, repellendus provident molestias, reiciendis qui fugit est consectetur libero hic ipsa dolore rem id praesentium molestiae quos!
+                    </p>
+                </div>
+            </div>
+            <div class="product-checkout-block">
+                <p class="product-total">Total</p>
+                <p class="product-price">S/. 70.00</p>
+                <p class="product-tax">Incluye IGV.</p>
+                <p class="product-description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Libero harum ratione officia sint excepturi fugiat beatae magnam autem dignissimos, veniam ipsam exercitationem natus sapiente quam, nemo inventore nobis! Perferendis, quidem.</p>
+                <ul class="product-checkout-info">
+                    <li class="product-checkout-list">
+                        <span class="list-icon">
+                            <img src="./assets/truck.png" alt="icon truck">
+                        </span>
+                        <span class="list-description">
+                            Agrega el producto al carrito para conocer los costos de envío
+                        </span>
+                    </li>
+                    <li class="product-checkout-list">
+                        <span class="list-icon">
+                            <img src="./assets/plane.png" alt="icon plane">
+                        </span>
+                        <span class="list-description">
+                            Recibe el producto en aproximadamente 10 a 15 días hábiles, seleccionando envío normal
+                        </span>
+                    </li>
+                    <li class="product-checkout-list">
+                        <span class="list-icon">
+                            <img src="./assets/award-solid.svg" alt="icon award">
+                        </span>
+                        <span class="list-description">
+                            Todos nuestros productos cuentan con una garantía del 100% de devolución del dinero.
+                        </span>
+                    </li>
+                    <li class="product-checkout-list">
+                        <span class="list-icon">
+                            <img src="./assets/credit-card-solid.svg" alt="icon credit-card">
+                        </span>
+                        <span class="list-description">
+                            Se aceptan todas las tarjetas y pago contraentrega.
+                        </span>
+                    </li>
+                </ul>
+                <form class="product-form-group">
+                    <div class="form-top">
+                        <input type="number" min="1" value="1" />
+                        <button class="btn-outline">Añadir al Carrito</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+        <section class="product-similar">
+            <h2 class="product-similar-title">PRODUCTOS SIMILARES</h2>
+            <div class="product-container" id="products">
+                <a class="product-container-card" href="./details.html">
+                    <img class="product-img" src="./assets/funko_pop_black_clover.webp" alt="Funko Pop de Black Clover" />
+                    <div class="product-info">
+                        <span class="product-title">Funko Pop Black Clover - Black Asta</span>
+                        <span class="product-description">Exclusive Limited Edition</span>
+                        <div class="product-price-block">
+                            <span class="price">S/. 70.00</span>
+                            <span class="discount">10% Off</span>
+                        </div>
+                        <div class="product-tax-policy">Incluye IGV</div>
+                    </div>
+                </a>
+                <a class="product-container-card" href="./details.html">
+                    <img class="product-img" src="./assets/funko_pop_black_clover.webp" alt="Funko Pop de Black Clover" />
+                    <div class="product-info">
+                        <span class="product-title">Funko Pop Black Clover - Black Asta</span>
+                        <span class="product-description">Exclusive Limited Edition</span>
+                        <div class="product-price-block">
+                            <span class="price">S/. 70.00</span>
+                            <span class="discount">10% Off</span>
+                        </div>
+                        <div class="product-tax-policy">Incluye IGV</div>
+                    </div>
+                </a>
+                <a class="product-container-card" href="./details.html">
+                    <img class="product-img" src="./assets/funko_pop_black_clover.webp" alt="Funko Pop de Black Clover" />
+                    <div class="product-info">
+                        <span class="product-title">Funko Pop Black Clover - Black Asta</span>
+                        <span class="product-description">Exclusive Limited Edition</span>
+                        <div class="product-price-block">
+                            <span class="price">S/. 70.00</span>
+                            <span class="discount">10% Off</span>
+                        </div>
+                        <div class="product-tax-policy">Incluye IGV</div>
+                    </div>
+                </a>
+            </div>
+        </section>
+    </main>
+    <footer>
+        <div class="container_footer">
+            <div id="footer" class="columns-container">
+                <div class="col">
+                    <span class="col-title">OFERTAS</span>
+                    <ul class="col-list">
+                        <li class="col-list-opcion">
+                            <a href="#">Chibi Masters</a>
+                        </li>
+                        <li class="col-list-opcion">
+                            <a href="#">Comics</a>
+                        </li>
+                        <li class="col-list-opcion">
+                            <a href="#">Hot Toys</a>
+                        </li>
+                        <li class="col-list-opcion">
+                            <a href="#">Merchandising</a>
+                        </li>
+                        <li class="col-list-opcion">
+                            <a href="#">Pop Keychain</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <span class="col-title">ENLACES IMPORTANTES</span>
+                    <ul class="col-list">
+                        <li class="col-list-opcion">
+                            <a href="#">Libro de reclamaciones</a>
+                        </li>
+                        <li class="col-list-opcion">
+                            <a href="#">Políticas y condiciones de uso</a>
+                        </li>
+                        <li class="col-list-opcion">
+                            <a href="#">Sugerencias</a>
+                        </li>
+                        <li class="col-list-opcion">
+                            <a href="#">Guía para padres</a>
+                        </li>
+                        <li class="col-list-opcion">
+                            <a href="#">Trabaja con nosotros</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <span class="col-title">INFORMACIÓN</span>
+                    <ul class="col-list">
+                        <li class="col-list-opcion">
+                            <a href="#">Nosotros</a>
+                        </li>
+                        <li class="col-list-opcion">
+                            <a href="#">Nuestras tiendas</a>
+                        </li>
+                        <li class="col-list-opcion">
+                            <a href="#">¿Cómo comprar?</a>
+                        </li>
+                        <li class="col-list-opcion">
+                            <a href="#">Preguntas Frecuentes</a>
+                        </li>
+                        <li class="col-list-opcion">
+                            <a href="#">Comprobantes Electrónicos</a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="col">
+                    <span class="col-title">SUSCRÍBETE</span>
+                    <form action="" class="col-form">
+                        <input type="text" class="col-form-input" placeholder="example@gmail.com" id="suscription">
+                    </form>
+                </div>
+            </div>
+            <div class="copyright">
+                <p>Funkomania &#169 2024. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
