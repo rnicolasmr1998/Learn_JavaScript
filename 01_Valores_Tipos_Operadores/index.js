@@ -311,3 +311,22 @@ console.clear()         // Limpia la consola
 
 let edad = window.prompt("Cuantos años tienes:")
 console.log(typeof edad)
+
+/* Para crear una variable con datos proporcionados por el cliente, se puede usar
+la función prompt que muestra un mensaje en la pantalla para que se pueda introducir
+un valor */
+
+let mySign = prompt("What's your sing?")
+console.log(mySign)
+
+// El valor se va a transformar en un string o null, dependdiendo el caso
+console.log(typeof mySign)
+
+/* Para el caso de variables de tipo string, se pueden realizar algunos métodos
+específicos colocando un punto a continuación del nombre de la variable y
+asignandole el método que uno quiere aplicar; algunos ejemplos: */
+
+let myAddress = "Avenida Pedro Silva"     // creamos una variable
+console.log(myAddress.length)             // devuelve el número de caracteres
+console.log(myAddress.toLowerCase())      // convierte todo a minúscula
+console.log(myAddress.toUpperCase())      // convierte todo a mayúscula
