@@ -2,7 +2,7 @@
 // FUNCIONES --------------------------------------------------------------------------
 ///////////////////////////////////////////////////////////////////////////////////////
 
-/*Las funciones son una de las herramientas más centrales en la programación en 
+/* Las funciones son una de las herramientas más centrales en la programación en 
 JavaScript. El concepto de envolver un fragmento de programa en un valor tiene 
 muchos usos. Nos proporciona una manera de estructurar programas más grandes, de 
 reducir la repetición, de asociar nombres con subprogramas y de aislar estos 
