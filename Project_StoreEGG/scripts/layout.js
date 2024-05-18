@@ -34,7 +34,6 @@ for (let option of options) {
 /* Define una variable footerSelector, para seleccionar la etiqueta
 correspondiente donde se renderizará el pie de página. */
 const footerSelector = document.querySelector("#footer");
-console.log(footerSelector)
 
 /* Crea una variable footerOptions, para guardar un array de objetos. 
 Cada objeto representará los datos de un botón con las propiedades: */
