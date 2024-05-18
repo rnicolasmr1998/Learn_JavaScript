@@ -85,7 +85,7 @@ productsSelector.innerHTML = productsTemplate
 
 function createCard(product) {
     return `
-    <a class="product-container-card" href="./details.html">
+    <a class="product-container-card" href="./details.html?id=${product.id}">
         <img class="product-img" src="./assets/${product.images[0]}" alt="Funko Pop de Black Clover" />
         <div class="product-info">
             <span class="product-title">${product.title}</span>
