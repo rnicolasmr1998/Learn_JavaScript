@@ -132,7 +132,7 @@ main .product-container {
     gap: 10px;
 }
 
-.product-img-block .product-main-img img{
+.product-img-block #main-img {
     width: 100%;
     padding:10px;
 }
