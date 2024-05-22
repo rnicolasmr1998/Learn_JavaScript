@@ -4,15 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tienda Virtual</title>
-    <link rel="stylesheet" href="https://use.typekit.net/ntr4rrs.css">
-    <link rel="stylesheet" href="./styles/normalize.css">
     <link rel="stylesheet" href="./styles/details.css">
 </head>
 <body>
     <header class="header" id="header">
         <div class="header-container">
             <a href="./index.html" class="header-logo">
-                <img src="./assets/funkomania_logo.png" alt="Logo store" class="header-logo-img" width="218">
+                <img src="./assets/site-logo.svg" alt="Logo store" class="header-logo-img" width="218">
             </a>
             <form class="header-form">
                 <!-- <input type="text" class="header-form-input" placeholder="Search" id="search"> -->
@@ -130,8 +128,8 @@
         </div>
         <section class="product-similar">
             <h2 class="product-similar-title">PRODUCTOS SIMILARES</h2>
-            <div class="product-container" id="products">
-                <a class="product-container-card" href="./details.html">
+            <div class="product-container" id="products-features">
+                <!-- <a class="product-container-card" href="./details.html">
                     <img class="product-img" src="./assets/funko_pop_black_clover.webp" alt="Funko Pop de Black Clover" />
                     <div class="product-info">
                         <span class="product-title">Funko Pop Black Clover - Black Asta</span>
@@ -166,7 +164,7 @@
                         </div>
                         <div class="product-tax-policy">Incluye IGV</div>
                     </div>
-                </a>
+                </a> -->
             </div>
         </section>
     </main>
@@ -247,6 +245,7 @@
     </footer>
     <script src="./scripts/layout.js"></script>
     <script src="./scripts/products.js"></script>
+    <script src="./scripts/functions/getRandomData.js"></script>
     <script src="./scripts/productDetail.js"></script>
 </body>
 </html>

@@ -6,13 +6,13 @@ const navSelector = document.querySelector("#nav");
 
 /* Crea una variable options, para guardar un array de objetos. 
 Cada objeto representará los datos de un botón con las propiedades: */
-const options = [
-    {title: "OFERTAS", linkto: "#"},
-    {title: "DC COMICS", linkto: "#"},
-    {title: "DISNEY", linkto: "#"},
-    {title: "MARVEL", linkto: "#"},
-    {title: "STAR WARS", linkto: "#"},
-    {title: "PRE-VENTA", linkto: "#"},
+const navOptions = [
+    {title: "OFERTAS", linkto: "./index.html"},
+    {title: "DC COMICS", linkto: "./index.html"},
+    {title: "DISNEY", linkto: "./index.html"},
+    {title: "MARVEL", linkto: "./index.html"},
+    {title: "STAR WARS", linkto: "./index.html"},
+    {title: "PRE-VENTA", linkto: "./index.html"},
 ]
 
 /* Itera con for of, de manera que cada iteración:
@@ -21,7 +21,7 @@ const options = [
 - Define la propiedad href de cada objeto.
 - Luego “agregar un hijo” al navSelector */
 
-for (let option of options) {
+for (let option of navOptions) {
     const anchor = document.createElement("a");
     anchor.className = "navbar-a"
     anchor.textContent = option.title
@@ -70,7 +70,7 @@ for (let footerOption of footerOptions) {
             ulColList.appendChild(liColList)
             const anchor = document.createElement("a");
             anchor.className = "col-list-link"
-            anchor.href = "#"
+            anchor.href = "./index.html"
             anchor.textContent = opt
             liColList.appendChild(anchor)
         }    

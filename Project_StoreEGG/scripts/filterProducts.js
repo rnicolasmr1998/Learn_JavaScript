@@ -31,6 +31,8 @@ const captureText = (event) => {
     let valueText = event.target.value;
     console.log(valueText)
 
+    
+    
     // Omitir las palabras que comienzan con espacio
     if (valueText.trim().length === 0) {
         // Si el valor capturado es solo espacios, no aplicar filtro
@@ -41,8 +43,16 @@ const captureText = (event) => {
     // Filtrar el array de productos cuyo nombre comience con el texto capturado
     let filterProducts = products.filter((product) => product.title.toLowerCase().startsWith(valueText.toLowerCase()))
     
-    // Renderizar los productos filtrados
-    printCards(filterProducts, "products")
+    // Renderizar los productos filtrados o mostrar mensaje si no se encuentran resultados
+    if (filterProducts.length === 0) {
+        productsSelector.innerHTML = "";
+        const h2Element = document.createElement("h2");
+        h2Element.textContent = `"No se encontraron resultados"`;
+        productsSelector.appendChild(h2Element);
+    } else {
+
+        printCards(filterProducts, "products");
+    }
 }
 
 inputSearch.addEventListener("keyup", event => captureText(event))

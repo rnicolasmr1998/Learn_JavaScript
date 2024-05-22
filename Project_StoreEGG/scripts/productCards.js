@@ -1,4 +1,4 @@
-// Actividad: Renderizando los productos con un template string
+//* Actividad: Renderizando los productos con un template string
 /* Define una variable productsSelector, para seleccionar la etiqueta correspondiente donde se renderizarán las tarjetas de productos. */
 const productsSelector = document.getElementById("products")
 
@@ -80,13 +80,13 @@ let productsTemplate = `
 
 productsSelector.innerHTML = productsTemplate
 
-// Actividad: Renderizar los productos de forma dinámica
+//* Actividad: Renderizar los productos de forma dinámica
 /* Define una función createCard para que reciba como parámetro un objeto y devuelva un template string con sólo una tarjeta de producto. */
 
 function createCard(product) {
     return `
     <a class="product-container-card" href="./details.html?id=${product.id}">
-        <img class="product-img" src="./assets/${product.images[0]}" alt="Funko Pop de Black Clover" />
+        <img class="product-img" src="./assets/${product.images[0]}" alt="${product.title}" />
         <div class="product-info">
             <span class="product-title">${product.title}</span>
             <span class="product-description">${product.subtitle}</span>
@@ -94,7 +94,7 @@ function createCard(product) {
                 <span class="price">S/. ${product.price}</span>
                 <span class="discount">${product.discount}% Off</span>
             </div>
-            <div class="product-tax-policy">Incluye IGV</div>
+            <div class="product-tax-policy">${product.taxPolicy}</div>
         </div>
     </a>
     `
@@ -106,7 +106,7 @@ for (const element of products) {
 }
 productsSelector.innerHTML = productsTemplate
 
-// Actividad: Función de renderizado
+//* Actividad: Función de renderizado
 /* Crear una función que “encapsule” todo lo desarrollado en la actividad anterior. */
 
 function printCards(arrayOfProducts, idSelector) {

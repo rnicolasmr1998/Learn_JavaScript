@@ -7,8 +7,8 @@ const query = location.search
 // console.log(query)
 const params = new URLSearchParams(query)
 // console.log(params)
-const id = params.get('id')
-// console.log(id)
+const idParams = params.get('id')
+// console.log(idParams)
 
 //* Actividad: Renderizar dinámicamente la vista de detalle --------------------------------
 
@@ -19,12 +19,88 @@ de detalles e interpole con ${} los datos correspondientes al detalle
 del producto, seleccione un id del html donde se imprimirá la plantilla
 y actualice la vista con la renderización del detalle */
 
+printDetails(idParams)
+
+function sectionCard(product) {
+    return `
+    <a class="product-container-card" href="./details.html?id=${product.id}">
+                    <img class="product-img" src="./assets/${product.images[0]}" alt="${product.title}" />
+                    <div class="product-info">
+                        <span class="product-title">${product.title}</span>
+                        <span class="product-description">${product.subtitle}</span>
+                        <div class="product-price-block">
+                            <span class="price">S/. ${product.price}</span>
+                            <span class="discount">${product.discount}% Off</span>
+                        </div>
+                        <div class="product-tax-policy">${product.taxPolicy}</div>
+                    </div>
+                </a>
+    `
+}
+
+function printFeatures(arrayOfProducts, idSelector) {
+    let productsFeatures = ""
+    for(const element of arrayOfProducts) {
+        productsFeatures = productsFeatures + sectionCard(element)
+    }
+    const sectionSelector = document.getElementById(idSelector)
+    sectionSelector.innerHTML = productsFeatures
+}
+
+printFeatures(productsFeatured, "products-features");
+
+//* Define la función changeMini para que:
+/* Dependa del evento de click, guarde en una variable la ruta de la imagen de la 
+miniatura, seleccione el id de la imagen agrandada y actualice la vista con la 
+imagen agrandada seleccionada */
+
+const imageSmall = document.querySelectorAll('#img-small img')
+imageSmall.forEach(image => {
+    // console.log(image)
+    image.addEventListener('click', changeMini)
+})
+
+function changeMini(event) {
+    // Traer el src de la imagen seleccionada
+    const selectedImage = event.target.src
+    
+    // Traer el selector de la imagen grande
+    const mainImage = document.getElementById('main-img')
+    
+    // Actualizar el src de la imagen grande
+    mainImage.src = selectedImage
+}
+
+//*  Actividad: Calcular el subtotal a pagar
+/* Modifica la función printDetails para que el input numérico de la cantidad 
+tenga asignado un evento de cambio “en línea”. Cada cambio en las unidades 
+a comprar debe ejecutar una función que actualice el subtotal a pagar */
+
+const inputSelect = document.querySelector('.form-top input')
+inputSelect.addEventListener('input', changePrice)
+
+function changePrice(event){
+    //traer la cantidad del input de tipo number
+    const quantity = event.target.value;
+    console.log(quantity)
+    //traer el producto
+    const prod = products.find(product => product.id === idParams);
+    //traer el selector del precio
+    const priceSelector = document.querySelector(".product-price");
+    if (prod) {
+        priceSelector.textContent = `S/. ${quantity * prod.price}.00`;
+    }
+}
+
+
 function printDetails(id) {
     const productSelect = products.find(each => each.id === id)
     const detailsTemplate = `
             <div class="product-img-block">
                 <div id="img-small" class="product-thumbnail">
-                    ${productSelect.images.map(image => `<img src="./assets/${image}" alt="Funko Pop Black Clover - Black Asta - Caja" >`).join('')}
+                    ${productSelect.images.map(function (image) {
+                        return `<img src="./assets/${image}" alt="Funko Pop Black Clover - Black Asta - Caja" >`
+                    }).join('')}
                 </div>
                 <img src="./assets/${productSelect.images[0]}" alt="Funko Pop de Black Clover" id="main-img" >
             </div>
@@ -96,47 +172,4 @@ function printDetails(id) {
     `
     const detailsSelector = document.querySelector('#products')
     detailsSelector.innerHTML = detailsTemplate
-}
-
-printDetails(id)
-
-//* Define la función changeMini para que:
-/* Dependa del evento de click, guarde en una variable la ruta de la imagen de la 
-miniatura, seleccione el id de la imagen agrandada y actualice la vista con la 
-imagen agrandada seleccionada */
-
-const imageSmall = document.querySelectorAll('#img-small img')
-imageSmall.forEach(image => {
-    // console.log(image)
-    image.addEventListener('click', changeMini)
-})
-
-function changeMini(event) {
-    // Traer el src de la imagen seleccionada
-    const selectedImage = event.target.src
-    
-    // Traer el selector de la imagen grande
-    const mainImage = document.getElementById('main-img')
-    
-    // Actualizar el src de la imagen grande
-    mainImage.src = selectedImage
-}
-
-//*  Actividad: Calcular el subtotal a pagar
-/* Modifica la función printDetails para que el input numérico de la cantidad 
-tenga asignado un evento de cambio “en línea”. Cada cambio en las unidades 
-a comprar debe ejecutar una función que actualice el subtotal a pagar */
-
-const inputSelect = document.querySelector('.form-top input')
-console.log(inputSelect)
-inputSelect.addEventListener('input', changePrice)
-
-function changePrice(event){
-    //traer la cantidad del input de tipo number
-    const quantity = event.target.value;
-    //traer el producto
-    const productSelect = products.find(product => product.id == id);
-    //traer el selector del precio
-    const priceSelector = document.querySelector(".product-price");
-    priceSelector.innerHTML = `S/. ${quantity * productSelect.price}.00`
 }

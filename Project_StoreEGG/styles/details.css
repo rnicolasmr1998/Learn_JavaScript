@@ -1,14 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200..700&display=swap');
+
+.navbar-a {
+    font-family: "Oswald", sans-serif;
+    font-weight: 500;
+    font-optical-sizing: auto;
+}
+
 /* General style */
 * {
     margin: 0;
     padding: 0;
-    font-family: "adobe-caslon-pro", serif;
-    font-weight: 600;
-    font-style: normal;
     box-sizing: border-box;
     text-decoration: none;
     list-style: none;
     color: inherit;
+}
+
+:root {
+    --color-black: #222222;
+    --color-white: #fff;
 }
 
 html {
@@ -21,7 +31,11 @@ html {
 /* Header style */
 header {
     padding: 0 5%;
-    background: #1B4F72 ;
+    background: var(--color-black);
+}
+
+.header-logo img {
+    filter: invert(1)
 }
 
 .header-container {
@@ -110,6 +124,7 @@ main .product-container {
     grid-template-columns: repeat(3, 1fr);
     gap: 10px;
     overflow: hidden;
+    min-height: 150px;
 }
 
 .product-container .product-img-block {
@@ -308,10 +323,12 @@ main .product-container {
 }
 
 /* footer style */
+
 footer {
-    background-color:  #1B4F72;
+    background: var(--color-black);
     padding: 5px 5%;
     color: #fff;
+    font-family: "Oswald", sans-serif;;
 }
 
 /* footer .container_footer{
